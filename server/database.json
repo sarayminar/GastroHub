@@ -2,59 +2,59 @@
     "platos": [
       {
         "id": 1,
-        "nombre": "Paella",
-        "origen": "España",
-        "ingredientes": ["arroz", "pollo", "conejo", "judías verdes", "tomate", "azafrán", "aceite de oliva"],
-        "procedimiento": "Sofreír carnes y verduras, añadir arroz y caldo, cocinar hasta que el arroz esté en su punto."
+        "name": "Paella",
+        "origin": "España",
+        "ingredients": ["arroz", "pollo", "conejo", "judías verdes", "tomate", "azafrán", "aceite de oliva"],
+        "procedure": "Sofreír carnes y verduras, añadir arroz y caldo, cocinar hasta que el arroz esté en su punto."
       },
       {
         "id": 2,
-        "nombre": "Sushi",
-        "origen": "Japón",
-        "ingredientes": ["arroz", "vinagre", "pescado", "alga nori", "salsa de soja"],
-        "procedimiento": "Preparar arroz sazonado, enrollar con pescado y alga, cortar en piezas."
+        "name": "Sushi",
+        "origin": "Japón",
+        "ingredients": ["arroz", "vinagre", "pescado", "alga nori", "salsa de soja"],
+        "procedure": "Preparar arroz sazonado, enrollar con pescado y alga, cortar en piezas."
       },
       {
         "id": 3,
-        "nombre": "Tacos",
-        "origen": "México",
-        "ingredientes": ["tortillas", "carne", "cebolla", "cilantro", "salsa"],
-        "procedimiento": "Cocinar la carne, servir en tortillas y agregar cebolla, cilantro y salsa."
+        "name": "Tacos",
+        "origin": "México",
+        "ingredients": ["tortillas", "carne", "cebolla", "cilantro", "salsa"],
+        "procedure": "Cocinar la carne, servir en tortillas y agregar cebolla, cilantro y salsa."
       },
       {
         "id": 4,
-        "nombre": "Curry de Pollo",
-        "origen": "India",
-        "ingredientes": ["pollo", "curry", "leche de coco", "cebolla", "ajo"],
-        "procedimiento": "Sofreír especias y pollo, añadir leche de coco y cocinar a fuego lento."
+        "name": "Curry de Pollo",
+        "origin": "India",
+        "ingredients": ["pollo", "curry", "leche de coco", "cebolla", "ajo"],
+        "procedure": "Sofreír especias y pollo, añadir leche de coco y cocinar a fuego lento."
       },
       {
         "id": 5,
-        "nombre": "Pasta Carbonara",
-        "origen": "Italia",
-        "ingredientes": ["pasta", "huevos", "queso pecorino", "panceta", "pimienta"],
-        "procedimiento": "Cocinar la pasta, mezclar con huevos y queso, incorporar la panceta y sazonar con pimienta."
+        "name": "Pasta Carbonara",
+        "origin": "Italia",
+        "ingredients": ["pasta", "huevos", "queso pecorino", "panceta", "pimienta"],
+        "procedure": "Cocinar la pasta, mezclar con huevos y queso, incorporar la panceta y sazonar con pimienta."
       },
       {
         "id": 6,
-        "nombre": "Lentejas",
-        "origen": "España",
-        "ingredientes": ["lentejas", "cebolla", "pimiento", "zanahoria", "tomate", "ajo", "laurel", "aceite de oliva", "agua", "sal"],
-        "procedimiento": "Sofreír cebolla, ajo y verduras, añadir lentejas, agua y laurel, cocinar a fuego lento hasta que estén tiernas."
+        "name": "Lentejas",
+        "origin": "España",
+        "ingredients": ["lentejas", "cebolla", "pimiento", "zanahoria", "tomate", "ajo", "laurel", "aceite de oliva", "agua", "sal"],
+        "procedure": "Sofreír cebolla, ajo y verduras, añadir lentejas, agua y laurel, cocinar a fuego lento hasta que estén tiernas."
       },
       {
         "id": 7,
-        "nombre": "Macarrones con Tomate",
-        "origen": "España",
-        "ingredientes": ["macarrones", "tomate triturado", "cebolla", "ajo", "aceite de oliva", "sal", "pimienta", "hierbas"],
-        "procedimiento": "Cocinar los macarrones, preparar una salsa con cebolla, ajo y tomate triturado, mezclar y servir caliente."
+        "name": "Macarrones con Tomate",
+        "origin": "España",
+        "ingredients": ["macarrones", "tomate triturado", "cebolla", "ajo", "aceite de oliva", "sal", "pimienta", "hierbas"],
+        "procedure": "Cocinar los macarrones, preparar una salsa con cebolla, ajo y tomate triturado, mezclar y servir caliente."
       },
       {
         "id": 8,
-        "nombre": "Frixuelos",
-        "origen": "España",
-        "ingredientes": ["harina", "leche", "huevos", "azúcar", "aceite", "sal"],
-        "procedimiento": "Mezclar los ingredientes hasta obtener una masa homogénea, dejar reposar y freír en sartén hasta dorar."
+        "name": "Frixuelos",
+        "origin": "España",
+        "ingredients": ["harina", "leche", "huevos", "azúcar", "aceite", "sal"],
+        "procedure": "Mezclar los ingredientes hasta obtener una masa homogénea, dejar reposar y freír en sartén hasta dorar."
       }
     ]
   }
