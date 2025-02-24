@@ -1,61 +1,142 @@
 {
-    "platos": [
-      {
-        "id": 1,
-        "name": "Paella",
-        "origin": "España",
-        "ingredients": ["arroz", "pollo", "conejo", "judías verdes", "tomate", "azafrán", "aceite de oliva"],
-        "procedure": "Sofreír carnes y verduras, añadir arroz y caldo, cocinar hasta que el arroz esté en su punto."
-      },
-      {
-        "id": 2,
-        "name": "Sushi",
-        "origin": "Japón",
-        "ingredients": ["arroz", "vinagre", "pescado", "alga nori", "salsa de soja"],
-        "procedure": "Preparar arroz sazonado, enrollar con pescado y alga, cortar en piezas."
-      },
-      {
-        "id": 3,
-        "name": "Tacos",
-        "origin": "México",
-        "ingredients": ["tortillas", "carne", "cebolla", "cilantro", "salsa"],
-        "procedure": "Cocinar la carne, servir en tortillas y agregar cebolla, cilantro y salsa."
-      },
-      {
-        "id": 4,
-        "name": "Curry de Pollo",
-        "origin": "India",
-        "ingredients": ["pollo", "curry", "leche de coco", "cebolla", "ajo"],
-        "procedure": "Sofreír especias y pollo, añadir leche de coco y cocinar a fuego lento."
-      },
-      {
-        "id": 5,
-        "name": "Pasta Carbonara",
-        "origin": "Italia",
-        "ingredients": ["pasta", "huevos", "queso pecorino", "panceta", "pimienta"],
-        "procedure": "Cocinar la pasta, mezclar con huevos y queso, incorporar la panceta y sazonar con pimienta."
-      },
-      {
-        "id": 6,
-        "name": "Lentejas",
-        "origin": "España",
-        "ingredients": ["lentejas", "cebolla", "pimiento", "zanahoria", "tomate", "ajo", "laurel", "aceite de oliva", "agua", "sal"],
-        "procedure": "Sofreír cebolla, ajo y verduras, añadir lentejas, agua y laurel, cocinar a fuego lento hasta que estén tiernas."
-      },
-      {
-        "id": 7,
-        "name": "Macarrones con Tomate",
-        "origin": "España",
-        "ingredients": ["macarrones", "tomate triturado", "cebolla", "ajo", "aceite de oliva", "sal", "pimienta", "hierbas"],
-        "procedure": "Cocinar los macarrones, preparar una salsa con cebolla, ajo y tomate triturado, mezclar y servir caliente."
-      },
-      {
-        "id": 8,
-        "name": "Frixuelos",
-        "origin": "España",
-        "ingredients": ["harina", "leche", "huevos", "azúcar", "aceite", "sal"],
-        "procedure": "Mezclar los ingredientes hasta obtener una masa homogénea, dejar reposar y freír en sartén hasta dorar."
-      }
-    ]
-  }
-  
+  "platos": [
+    {
+      "id": "1",
+      "name": "Paella",
+      "origin": "España",
+      "ingredients": [
+        "arroz",
+        "pollo",
+        "conejo",
+        "judías verdes",
+        "tomate",
+        "azafrán",
+        "aceite de oliva"
+      ],
+      "procedure": "Sofreír carnes y verduras, añadir arroz y caldo, cocinar hasta que el arroz esté en su punto."
+    },
+    {
+      "id": "2",
+      "name": "Sushi",
+      "origin": "Japón",
+      "ingredients": [
+        "arroz",
+        "vinagre",
+        "pescado",
+        "alga nori",
+        "salsa de soja"
+      ],
+      "procedure": "Preparar arroz sazonado, enrollar con pescado y alga, cortar en piezas."
+    },
+    {
+      "id": "3",
+      "name": "Tacos",
+      "origin": "México",
+      "ingredients": [
+        "tortillas",
+        "carne",
+        "cebolla",
+        "cilantro",
+        "salsa"
+      ],
+      "procedure": "Cocinar la carne, servir en tortillas y agregar cebolla, cilantro y salsa."
+    },
+    {
+      "id": "4",
+      "name": "Curry de Pollo",
+      "origin": "India",
+      "ingredients": [
+        "pollo",
+        "curry",
+        "leche de coco",
+        "cebolla",
+        "ajo"
+      ],
+      "procedure": "Sofreír especias y pollo, añadir leche de coco y cocinar a fuego lento."
+    },
+    {
+      "id": "5",
+      "name": "Pasta Carbonara",
+      "origin": "Italia",
+      "ingredients": [
+        "pasta",
+        "huevos",
+        "queso pecorino",
+        "panceta",
+        "pimienta"
+      ],
+      "procedure": "Cocinar la pasta, mezclar con huevos y queso, incorporar la panceta y sazonar con pimienta."
+    },
+    {
+      "id": "6",
+      "name": "Lentejas",
+      "origin": "España",
+      "ingredients": [
+        "lentejas",
+        "cebolla",
+        "pimiento",
+        "zanahoria",
+        "tomate",
+        "ajo",
+        "laurel",
+        "aceite de oliva",
+        "agua",
+        "sal"
+      ],
+      "procedure": "Sofreír cebolla, ajo y verduras, añadir lentejas, agua y laurel, cocinar a fuego lento hasta que estén tiernas."
+    },
+    {
+      "id": "7",
+      "name": "Macarrones con Tomate",
+      "origin": "España",
+      "ingredients": [
+        "macarrones",
+        "tomate triturado",
+        "cebolla",
+        "ajo",
+        "aceite de oliva",
+        "sal",
+        "pimienta",
+        "hierbas"
+      ],
+      "procedure": "Cocinar los macarrones, preparar una salsa con cebolla, ajo y tomate triturado, mezclar y servir caliente."
+    },
+    {
+      "id": "8",
+      "name": "Frixuelos",
+      "origin": "España",
+      "ingredients": [
+        "harina",
+        "leche",
+        "huevos",
+        "azúcar",
+        "aceite",
+        "sal"
+      ],
+      "procedure": "Mezclar los ingredientes hasta obtener una masa homogénea, dejar reposar y freír en sartén hasta dorar."
+    },
+    {
+      "id": "d707",
+      "name": "asdf",
+      "origin": "asdf",
+      "image": "asdf",
+      "ingredients": [
+        "asdf",
+        "asdf",
+        "asdf"
+      ],
+      "procedure": "asdfasdf"
+    },
+    {
+      "id": "889a",
+      "name": "saray",
+      "origin": "l`entregu",
+      "image": "asldkjfaslñdkjgf",
+      "ingredients": [
+        "pingu",
+        "inos"
+      ],
+      "procedure": "aslñkdjhgfagasdjhfgasjkh\naskdlhjfslkdajhf"
+    }
+  ]
+}
