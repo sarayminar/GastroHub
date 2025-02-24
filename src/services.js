@@ -12,4 +12,17 @@ async function getAllRecipes(){
     }
 }
 
+function resetBody(){
+    const bodyButtons = [{text: "Mostrar recetas", onclick: "showRecipes()"}, {text: "Crear receta", onclick: "loadCreateForm()"}];
+    document.body.innerHTML = "";
+    bodyButtons.forEach(button => {
+        let buttonElement = document.createElement("button");
+        buttonElement.textContent = button.text;
+        buttonElement.setAttribute("onclick", button.onclick);
+        document.body.appendChild(buttonElement);
+    })
+}
+
+
+resetBody();
 console.log(getAllRecipes());  
