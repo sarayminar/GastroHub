@@ -122,7 +122,7 @@ async function printRecipes(recipes) {
   let table = document.getElementById("recipes-table");
   recipes.forEach((element) => {
     let tr = document.createElement("tr");
-    tr.innerHTML = `<td>${element.name}</td><td>${element.origin}</td><td>imagen</td><td><button onclick="getRecipeForm('${element.id}')">Editar</button></td><td><button onclick="deleteRecipe('${element.id}')">Eliminar</button></td>`;
+    tr.innerHTML = `<td onclick="printInfo('${element.id}')">${element.name}</td><td>${element.origin}</td><td>imagen</td><td><button onclick="getRecipeForm('${element.id}')">Editar</button></td><td><button onclick="deleteRecipe('${element.id}')">Eliminar</button></td>`;
     table.appendChild(tr);
   });
 }
@@ -134,7 +134,6 @@ async function showRecipes() {
 
 // Método EDIT
 function getRecipeForm(id) {
-  console.log(id);
   loadForm();
   loadFieldsForm(id);
   document.getElementById("recipe-form").addEventListener("submit", (e) => {
@@ -234,6 +233,36 @@ async function deleteR(id) {
   } catch (error) {
     console.log("Ha habido un error: " + error);
   }
+}
+
+// PRINT CARD 
+async function printInfo(id) {
+  resetBody();
+  const recipe = await getOneRecipe(id);
+  printCard(recipe);
+}
+
+function printCard(recipe) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.innerHTML = `
+    <h2>${recipe.name}</h2>
+    <p>Origen: ${recipe.origin}</p>
+    <img src="${recipe.image}" alt="${recipe.name}">
+    <p>Ingredientes:</p>
+    <ul>
+    `
+  recipe.ingredients.forEach((ingredient) => {
+    card.innerHTML += `<li>${ingredient}</li>`;
+  });
+  card.innerHTML += `
+    </ul>
+    <h4>Procedimiento:</h4>
+    <p>${recipe.procedure}</p>
+    <button onclick="getRecipeForm('${recipe.id}')">Editar</button>
+    <button onclick="deleteRecipe('${recipe.id}')">Eliminar</button>
+  `;
+  document.body.appendChild(card);
 }
 
 resetBody();
