@@ -114,69 +114,6 @@
         "sal"
       ],
       "procedure": "Mezclar los ingredientes hasta obtener una masa homogénea, dejar reposar y freír en sartén hasta dorar."
-    },
-    {
-      "id": "d707",
-      "name": "asdf",
-      "origin": "asdf",
-      "image": "asdf",
-      "ingredients": [
-        "asdf",
-        "asdf",
-        "asdf"
-      ],
-      "procedure": "asdfasdf"
-    },
-    {
-      "id": "889a",
-      "name": "saray",
-      "origin": "l`entregu",
-      "image": "asldkjfaslñdkjgf",
-      "ingredients": [
-        "pingu",
-        "inos"
-      ],
-      "procedure": "aslñkdjhgfagasdjhfgasjkh\naskdlhjfslkdajhf"
-    },
-    {
-      "id": "0e7e",
-      "name": "h",
-      "origin": "hh",
-      "image": "h",
-      "ingredients": [
-        "h"
-      ],
-      "procedure": "h"
-    },
-    {
-      "id": "e3bf",
-      "name": "haaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "origin": "hhaaaaaaaaaa",
-      "image": "haaa",
-      "ingredients": [
-        "ha"
-      ],
-      "procedure": "ha"
-    },
-    {
-      "id": "e7ab",
-      "name": "ggg",
-      "origin": "gg",
-      "image": "g",
-      "ingredients": [
-        "g"
-      ],
-      "procedure": "g"
-    },
-    {
-      "id": "0fc0",
-      "name": "f",
-      "origin": "f",
-      "image": "f",
-      "ingredients": [
-        "f"
-      ],
-      "procedure": "aaaaaaaaaaaaaaaaagfggg"
     }
   ]
 }

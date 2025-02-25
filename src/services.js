@@ -39,7 +39,7 @@ async function createRecipe() {
     return;
   }
 
-  const response = await postRecipe( recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
+  const response = await postRecipe(recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
 
   if (!response.ok) {
     alert("Error al guardar en base de datos");
@@ -51,14 +51,14 @@ async function createRecipe() {
   document.body.appendChild(p);
 }
 
-function validateFieldsForm(recipeName,recipeOrigin,recipeImage,recipeIngredients,recipeProcedure) {
+function validateFieldsForm(recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure) {
   if (recipeName.length == 0 || recipeOrigin.length == 0 || recipeImage.length == 0 || recipeIngredients.length == 0 || recipeProcedure.length == 0) {
     return false;
   }
   return true;
 }
 
-async function postRecipe(recipeName,recipeOrigin,recipeImage,recipeIngredients,recipeProcedure) {
+async function postRecipe(recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure) {
   try {
     const response = await fetch(urlBase, {
       method: "POST",
@@ -153,7 +153,7 @@ async function editRecipe(id) {
     alert("Rellene correctamente todos los campos");
     return;
   }
-  const response = await postRecipe( recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
+  const response = await postRecipe(recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
 
   if (!response.ok) {
     alert("Error al guardar en base de datos");
@@ -166,7 +166,7 @@ async function editRecipe(id) {
 }
 
 
-async function putRecipe(id,recipeName,recipeOrigin,recipeImage,recipeIngredients,recipeProcedure){
+async function putRecipe(id, recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure) {
   try {
     const response = await fetch(urlBase + id, {
       method: "PUT",
@@ -206,6 +206,34 @@ async function loadFieldsForm(id) {
   document.getElementById("recipe-ingredients").value =
     response.ingredients.join();
   document.getElementById("recipe-procedure").value = response.procedure;
+}
+
+//Método DELETE
+async function deleteRecipe(id) {
+  const confirmation = confirm("¿Estás seguro de eliminar la receta?");
+  if (!confirmation) {
+    return;
+  }
+
+  const response = await deleteR(id);
+  if (!response.ok) {
+    alert("Error al eliminar la receta");
+    return;
+  }
+
+  resetBody();
+  const p = document.createElement("p");
+  p.textContent = "Receta eliminada correctamente";
+  document.body.appendChild(p);
+}
+
+async function deleteR(id) {
+  try {
+    const response = await fetch(urlBase + id, { method: "DELETE" });
+    return response;
+  } catch (error) {
+    console.log("Ha habido un error: " + error);
+  }
 }
 
 resetBody();
