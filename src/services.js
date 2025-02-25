@@ -11,6 +11,10 @@ function loadCreateForm() {
 }
 
 function loadForm() {
+  if (document.getElementById("recipe-form")) {
+    return;
+  }
+
   const createForm = document.createElement("form");
   createForm.setAttribute("id", "recipe-form");
   createForm.innerHTML = `
