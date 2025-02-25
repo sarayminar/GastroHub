@@ -1,15 +1,48 @@
-body{
-    background-color: #FCE7C8;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.botones{
+body {
+    background-color: #FCE7C8;
+    font-family: Arial, sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botones {
     background-color: #FADA7A;
     border: 0;
     border-radius: 10%;
-    padding: auto 40%;
-
-    
+    margin: 15%;
 }
 
+img {
+    width: 50px;
+    height: auto;
+    border-radius: 10%;
+}
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid;
+}
 
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+th {
+    padding: 5px;
+}

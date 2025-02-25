@@ -1,5 +1,5 @@
 const urlBase = "http://localhost:3000/platos/";
-
+const container = document.getElementById("container");
 //Método POST
 function loadCreateForm() {
   resetBody();
@@ -29,7 +29,7 @@ function loadForm() {
     <label for="recipe-procedure">Procedimiento:</label>
     <textarea id="recipe-procedure" name="recipe-procedure"></textarea><br><br>
     <input type="submit" value="Enviar">`;
-  document.body.appendChild(createForm);
+  container.appendChild(createForm);
 }
 
 async function createRecipe() {
@@ -52,7 +52,7 @@ async function createRecipe() {
   resetBody();
   const p = document.createElement("p");
   p.textContent = "Receta creada correctamente";
-  document.body.appendChild(p);
+  container.appendChild(p);
 }
 
 function validateFieldsForm(recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure) {
@@ -99,12 +99,13 @@ function resetBody() {
     { text: "Mostrar recetas", onclick: "showRecipes()" },
     { text: "Crear receta", onclick: "loadCreateForm()" },
   ];
-  document.body.innerHTML = "";
+  container.innerHTML = "";
   bodyButtons.forEach((button) => {
     let buttonElement = document.createElement("button");
     buttonElement.textContent = button.text;
     buttonElement.setAttribute("onclick", button.onclick);
-    document.body.appendChild(buttonElement);
+    buttonElement.setAttribute("class", "botones");
+    container.appendChild(buttonElement);
   });
 }
 
@@ -117,7 +118,7 @@ function loadTable() {
   table.setAttribute("id", "recipes-table");
   table.innerHTML =
     "<tr><th>Receta</th><th>Origen</th><th>Imagen</th><th> </th><th> </th></tr>";
-  document.body.appendChild(table);
+  container.appendChild(table);
 }
 
 // Método PRINT
@@ -165,7 +166,7 @@ async function editRecipe(id) {
   resetBody();
   const p = document.createElement("p");
   p.textContent = "Receta modificada correctamente";
-  document.body.appendChild(p);
+  container.appendChild(p);
 }
 
 
@@ -227,7 +228,7 @@ async function deleteRecipe(id) {
   resetBody();
   const p = document.createElement("p");
   p.textContent = "Receta eliminada correctamente";
-  document.body.appendChild(p);
+  container.appendChild(p);
 }
 
 async function deleteR(id) {
@@ -263,10 +264,10 @@ function printCard(recipe) {
     </ul>
     <h4>Procedimiento:</h4>
     <p>${recipe.procedure}</p>
-    <button onclick="getRecipeForm('${recipe.id}')">Editar</button>
-    <button onclick="deleteRecipe('${recipe.id}')">Eliminar</button>
+    <button class="botones" onclick="getRecipeForm('${recipe.id}')">Editar</button>
+    <button class="botones" onclick="deleteRecipe('${recipe.id}')">Eliminar</button>
   `;
-  document.body.appendChild(card);
+  container.appendChild(card);
 }
 
 resetBody();
