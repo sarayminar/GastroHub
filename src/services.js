@@ -126,7 +126,7 @@ async function printRecipes(recipes) {
   let table = document.getElementById("recipes-table");
   recipes.forEach((element) => {
     let tr = document.createElement("tr");
-    tr.innerHTML = `<td onclick="printInfo('${element.id}')">${element.name}</td><td>${element.origin}</td><td>imagen</td><td><button onclick="getRecipeForm('${element.id}')">Editar</button></td><td><button onclick="deleteRecipe('${element.id}')">Eliminar</button></td>`;
+    tr.innerHTML = `<td onclick="printInfo('${element.id}')">${element.name}</td><td>${element.origin}</td><td><img src="${element.image}"></td><td><button class="botones" onclick="getRecipeForm('${element.id}')">Editar</button></td><td><button class="botones" onclick="deleteRecipe('${element.id}')">Eliminar</button></td>`;
     table.appendChild(tr);
   });
 }
