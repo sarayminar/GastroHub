@@ -192,7 +192,6 @@ async function putRecipe(id, recipeName, recipeOrigin, recipeImage, recipeIngred
   }
 }
 
-
 async function getOneRecipe(id) {
   try {
     const response = await fetch(urlBase + id);
@@ -252,12 +251,13 @@ function printCard(recipe) {
   card.classList.add("card");
   card.innerHTML = `
     <h2>${recipe.name}</h2>
-    <p>Origen: ${recipe.origin}</p>
     <img src="${recipe.image}" alt="${recipe.name}">
-    <p>Ingredientes:</p>
+    <p><strong>Origen: ${recipe.origin}</p>
+    <p id="ingredients">Ingredientes:</p>
     <ul>
     `
   recipe.ingredients.forEach((ingredient) => {
+    ingredient=ingredient.charAt(0).toUpperCase() + ingredient.slice(1);
     card.innerHTML += `<li>${ingredient}</li>`;
   });
   card.innerHTML += `
