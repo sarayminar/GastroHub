@@ -5,10 +5,21 @@
 
 body {
     background-color: #FCE7C8;
-    font-family: Arial, sans-serif;
+    font-size: 20px;
     display: flex;
     width: 100%;
     justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin: auto;
+    width: 100%;
+}
+
+#title {
+    margin: 5% auto;
 }
 
 #container {
@@ -18,15 +29,31 @@ body {
     flex-wrap: wrap;
 }
 
-.botones {
-    background-color: #FADA7A;
+button {
+    cursor: pointer;
     border: 0;
     border-radius: 10%;
-    margin: 15%;
+    margin: 5% 15%;
+    padding: 10%;
+}
+
+.button {
+    background-color: #FADA7A;
+    padding: 2%;
+    font-size: large;
+}
+
+
+.button-edit {
+    background-color: #D3BD9A;
+}
+
+.button-delete {
+    background-color: #E5B299;
 }
 
 img {
-    width: 50px;
+    width: 100px;
     height: auto;
     border-radius: 10%;
 }
@@ -36,6 +63,11 @@ table {
     border-collapse: collapse;
     text-align: center;
     border: 1px solid;
+    margin-bottom: 10%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    background-color: #E3CAA5;
 }
 
 td {
@@ -43,6 +75,79 @@ td {
     padding: 5px;
 }
 
+.td-name {
+    cursor: pointer;
+}
+
 th {
     padding: 5px;
+}
+
+form {
+    background-color: #D8B384;
+    padding: 10%;
+    border-radius: 5%;
+    margin-bottom: 10%;
+    text-align: left;
+}
+
+.button-submit {
+    background-color: #FFDC76;
+    padding: 10px;
+    font-size: large;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10%;
+    margin: auto 40%;
+    margin-bottom: 3%;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    height: 20%;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+tr:hover {
+    background-color: #CEAB93;
+}
+
+tr:first-child {
+    background-color: #AD8B73;
+}
+
+tr:first-child:hover {
+    background-color: #AD8B73;
+}
+
+#annotation {
+    margin-top: 0;
+    color: #423F3E;
+    font-size: 15px;
+}
+
+#recipes-table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#recipes-table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+#recipes-table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+#recipes-table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }

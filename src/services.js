@@ -22,13 +22,13 @@ function loadForm() {
     <input type="text" id="recipe-name" name="recipe-name"><br><br>
     <label for="recipe-origin">Origen:</label>
     <input type="text" id="recipe-origin" name="recipe-origin"><br><br>
-    <label for="recipe-image">Imagen:</label>
+    <label for="recipe-image">Propuesta:</label>
     <input type="text" id="recipe-image" name="recipe-image"><br><br>
     <label for="recipe-ingredients">Ingredientes:</label>
-    <input type="text" id="recipe-ingredients" name="recipe-ingredients"> *(Separe con ',' cada ingrediente)<br><br>
+    <input type="text" id="recipe-ingredients" name="recipe-ingredients"> <span id="annotation">*(Separe con ',' cada ingrediente)</span><br><br>
     <label for="recipe-procedure">Procedimiento:</label>
     <textarea id="recipe-procedure" name="recipe-procedure"></textarea><br><br>
-    <input type="submit" value="Enviar">`;
+    <input class="button-submit" type="submit" value="Enviar">`;
   container.appendChild(createForm);
 }
 
@@ -104,7 +104,7 @@ function resetBody() {
     let buttonElement = document.createElement("button");
     buttonElement.textContent = button.text;
     buttonElement.setAttribute("onclick", button.onclick);
-    buttonElement.setAttribute("class", "botones");
+    buttonElement.setAttribute("class", "button");
     container.appendChild(buttonElement);
   });
 }
@@ -127,7 +127,7 @@ async function printRecipes(recipes) {
   let table = document.getElementById("recipes-table");
   recipes.forEach((element) => {
     let tr = document.createElement("tr");
-    tr.innerHTML = `<td onclick="printInfo('${element.id}')">${element.name}</td><td>${element.origin}</td><td><img src="${element.image}"></td><td><button class="botones" onclick="getRecipeForm('${element.id}')">Editar</button></td><td><button class="botones" onclick="deleteRecipe('${element.id}')">Eliminar</button></td>`;
+    tr.innerHTML = `<td class="td-name" onclick="printInfo('${element.id}')">${element.name}</td><td>${element.origin}</td><td><img src="${element.image}"></td><td><button class="button-edit" onclick="getRecipeForm('${element.id}')">Editar</button></td><td><button class="button-delete" onclick="deleteRecipe('${element.id}')">Eliminar</button></td>`;
     table.appendChild(tr);
   });
 }
@@ -157,7 +157,7 @@ async function editRecipe(id) {
     alert("Rellene correctamente todos los campos");
     return;
   }
-  const response = await postRecipe(recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
+  const response = await putRecipe(id,recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
 
   if (!response.ok) {
     alert("Error al guardar en base de datos");
@@ -264,8 +264,8 @@ function printCard(recipe) {
     </ul>
     <h4>Procedimiento:</h4>
     <p>${recipe.procedure}</p>
-    <button class="botones" onclick="getRecipeForm('${recipe.id}')">Editar</button>
-    <button class="botones" onclick="deleteRecipe('${recipe.id}')">Eliminar</button>
+    <button class="button" onclick="getRecipeForm('${recipe.id}')">Editar</button>
+    <button class="button" onclick="deleteRecipe('${recipe.id}')">Eliminar</button>
   `;
   container.appendChild(card);
 }

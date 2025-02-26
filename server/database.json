@@ -34,7 +34,7 @@
       "id": "3",
       "name": "Tacos",
       "origin": "México",
-      "image":"https://images.unsplash.com/photo-1613514785940-daed07799d9b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.unsplash.com/photo-1613514785940-daed07799d9b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "ingredients": [
         "tortillas",
         "carne",
@@ -45,10 +45,9 @@
       "procedure": "Cocinar la carne, servir en tortillas y agregar cebolla, cilantro y salsa."
     },
     {
-      "id": "4",
       "name": "Curry de Pollo",
       "origin": "India",
-      "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=1968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.pexels.com/photos/9218754/pexels-photo-9218754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "ingredients": [
         "pollo",
         "curry",
@@ -56,13 +55,13 @@
         "cebolla",
         "ajo"
       ],
-      "procedure": "Sofreír especias y pollo, añadir leche de coco y cocinar a fuego lento."
+      "procedure": "Sofreír especias y pollo, añadir leche de coco y cocinar a fuego lento.",
+      "id": "4"
     },
     {
-      "id": "5",
       "name": "Pasta Carbonara",
       "origin": "Italia",
-      "image":"https://plus.unsplash.com/premium_photo-1691009758120-9b3a2e0d688d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.pexels.com/photos/998246/pexels-photo-998246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "ingredients": [
         "pasta",
         "huevos",
@@ -70,13 +69,14 @@
         "panceta",
         "pimienta"
       ],
-      "procedure": "Cocinar la pasta, mezclar con huevos y queso, incorporar la panceta y sazonar con pimienta."
+      "procedure": "Cocinar la pasta, mezclar con huevos y queso, incorporar la panceta y sazonar con pimienta.",
+      "id": "5"
     },
     {
       "id": "6",
       "name": "Lentejas",
       "origin": "España",
-      "image":"https://media.istockphoto.com/id/1438209176/es/foto/lentejas-guisadas.webp?a=1&b=1&s=612x612&w=0&k=20&c=SMpT5T8lqNgpy0CzHohfm47cT0xbOmmXb2rAJUH_Kj0=",
+      "image": "https://media.istockphoto.com/id/1438209176/es/foto/lentejas-guisadas.webp?a=1&b=1&s=612x612&w=0&k=20&c=SMpT5T8lqNgpy0CzHohfm47cT0xbOmmXb2rAJUH_Kj0=",
       "ingredients": [
         "lentejas",
         "cebolla",
@@ -95,7 +95,7 @@
       "id": "7",
       "name": "Macarrones con Tomate",
       "origin": "España",
-      "image":"https://images.unsplash.com/photo-1582035619445-9c26d5de240d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "image": "https://images.unsplash.com/photo-1582035619445-9c26d5de240d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "ingredients": [
         "macarrones",
         "tomate triturado",
@@ -112,7 +112,7 @@
       "id": "8",
       "name": "Frixuelos",
       "origin": "España",
-      "image":"https://www.rebanando.com/uploads/media/frixuelos-4.jpg?1394115128",
+      "image": "https://www.rebanando.com/uploads/media/frixuelos-4.jpg?1394115128",
       "ingredients": [
         "harina",
         "leche",
