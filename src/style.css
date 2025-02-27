@@ -43,6 +43,14 @@ button {
     font-size: large;
 }
 
+.button-container{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+
+
 .button-edit {
     background-color: #D3BD9A;
 }
@@ -151,7 +159,6 @@ tr:first-child:hover {
     border-bottom-right-radius: 10px;
 }
 
-
 .card{
     display: flex;
     flex-wrap: wrap;
@@ -167,6 +174,7 @@ tr:first-child:hover {
     margin: auto;
     margin-left: 5%;
     margin-bottom: 1%;
+    font-size: 50px;
 }
 
 .card img{
@@ -180,7 +188,8 @@ tr:first-child:hover {
 .card p{
     margin-left: 5%;
     width: 90%;
-    margin-bottom:2% ;
+    margin-bottom:2%;
+    font-size: 30px;
 }
 
 .card ul{
@@ -192,6 +201,7 @@ tr:first-child:hover {
 .card li{
     width: 100%;
     margin-left: 5%;
+    font-size: 30px;
 }
 
 .card h4{
@@ -200,9 +210,31 @@ tr:first-child:hover {
     margin-left: 5%;
     margin-bottom: 1%;
     margin-top: 2%;
+    font-size: 30px;
 }
 
 #ingredients{
     margin-bottom: 0%;
     margin-left: 5%;
+    
+}
+
+@media (max-width: 768px ){
+
+    .card h2{
+        font-size: 15px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+    .card h4{
+        font-size: 15px;
+    }
+    .card li{
+        font-size: 15px;
+    }
+    .button{
+        font-size: 10px;
+    }
+
 }

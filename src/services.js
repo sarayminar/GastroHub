@@ -252,8 +252,8 @@ function printCard(recipe) {
   card.innerHTML = `
     <h2>${recipe.name}</h2>
     <img src="${recipe.image}" alt="${recipe.name}">
-    <p><strong>Origen: ${recipe.origin}</p>
-    <p id="ingredients">Ingredientes:</p>
+    <p><strong>Origen:</strong> ${recipe.origin}</p>
+    <p id="ingredients"><strong>Ingredientes:</strong></p>
     <ul>
     `
   recipe.ingredients.forEach((ingredient) => {
@@ -264,8 +264,10 @@ function printCard(recipe) {
     </ul>
     <h4>Procedimiento:</h4>
     <p>${recipe.procedure}</p>
+    <div class="button-container">
     <button class="button" onclick="getRecipeForm('${recipe.id}')">Editar</button>
-    <button class="button" onclick="deleteRecipe('${recipe.id}')">Eliminar</button>
+    <button class="button" onclick="deleteRecipe('${recipe.id}')">Eliminar</button></div>
+    
   `;
   container.appendChild(card);
 }
