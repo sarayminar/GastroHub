@@ -109,21 +109,42 @@ function resetBody() {
   });
 }
 
-function loadTable() {
+async function loadTable(recipes, value = "") {
   resetBody();
   if (document.getElementById("recipe-table")) {
     return;
   }
+  let recipesCountry;
+  if (value == "") {
+    recipesCountry = [...new Set(recipes.map(item => item.origin))];
+  } else {
+    recipesCountry = [value];
+  }
+
   const table = document.createElement("table");
   table.setAttribute("id", "recipes-table");
-  table.innerHTML =
-    "<tr><th>Receta</th><th>Origen</th><th>Imagen</th><th> </th><th> </th></tr>";
+  let tableContent = `<thead><th>Receta</th><th>Origen</th><th>Imagen</th><th>Países:</th>`
+  tableContent += value ? `<th><select id='country-select'><option value=''>-</option>` : `<th><select id='country-select'><option selected value=''>-</option>`
+  recipesCountry.forEach((country) => {
+    tableContent += `<option `
+    if (value == country) {
+      tableContent += `selected `
+    }
+
+    tableContent += `value='${country}'>${country}</option>`
+  });
+
+  tableContent += "</select></th></thead>";
+  table.innerHTML = tableContent;
   container.appendChild(table);
+  document.getElementById("country-select").addEventListener("change", (e) => {
+    filterByCountry();
+  });
 }
 
 // Método PRINT
-async function printRecipes(recipes) {
-  loadTable();
+async function printRecipes(recipes, country = "") {
+  loadTable(recipes, country);
   let table = document.getElementById("recipes-table");
   recipes.forEach((element) => {
     let tr = document.createElement("tr");
@@ -157,7 +178,7 @@ async function editRecipe(id) {
     alert("Rellene correctamente todos los campos");
     return;
   }
-  const response = await putRecipe(id,recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
+  const response = await putRecipe(id, recipeName, recipeOrigin, recipeImage, recipeIngredients, recipeProcedure);
 
   if (!response.ok) {
     alert("Error al guardar en base de datos");
@@ -257,7 +278,7 @@ function printCard(recipe) {
     <ul>
     `
   recipe.ingredients.forEach((ingredient) => {
-    ingredient=ingredient.charAt(0).toUpperCase() + ingredient.slice(1);
+    ingredient = ingredient.charAt(0).toUpperCase() + ingredient.slice(1);
     card.innerHTML += `<li>${ingredient}</li>`;
   });
   card.innerHTML += `
@@ -270,6 +291,23 @@ function printCard(recipe) {
     
   `;
   container.appendChild(card);
+}
+
+//FILTER TABLE
+async function filterByCountry() {
+  const country = document.getElementById("country-select").value;
+  const response = await filterBy("origin", country);
+  resetBody();
+  printRecipes(response, country);
+}
+
+async function filterBy(param, value) {
+  try {
+    const response = await fetch(urlBase + `?${param}=${value}`);
+    return await response.json();
+  } catch (error) {
+    console.log("Ha habido un error: " + error);
+  }
 }
 
 resetBody();
