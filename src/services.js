@@ -315,4 +315,8 @@ async function filterBy(param, value) {
   }
 }
 
+document.getElementById('modal').addEventListener('click', function() {
+  this.style.display = 'none';
+});
+
 resetBody();

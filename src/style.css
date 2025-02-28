@@ -137,6 +137,34 @@ tr:first-child:hover {
     background-color: #AD8B73;
 }
 
+
+
+.modal {
+    border: 20px solid  #7a6657;
+    background-image:url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    margin: 10% 25%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#CEAB93;
+    font-size: 28px;
+    border-radius: 25px;
+}
+
+.modal p{
+    background-color:#7a6657 ;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
 #annotation {
     margin-top: 0;
     color: #423F3E;
