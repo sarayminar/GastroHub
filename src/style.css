@@ -197,11 +197,12 @@ tr:first-child:hover {
     list-style: none;
     width: 90%;
     margin-bottom: 1%;
+    list-style-type: "- ";
 }
 
 .card li {
     width: 100%;
-    margin-left: 5%;
+    margin-left: 10%;
     font-size: 30px;
 }
 
@@ -218,6 +219,16 @@ tr:first-child:hover {
     margin-bottom: 0%;
     margin-left: 5%;
 
+}
+
+#result {
+    width: 100%;
+}
+
+#country-select {
+    border-radius: 5px;
+    background-color: #AD8B73;
+    border: 1px solid black;
 }
 
 @media (max-width: 768px) {

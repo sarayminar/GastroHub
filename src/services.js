@@ -51,6 +51,7 @@ async function createRecipe() {
 
   resetBody();
   const p = document.createElement("p");
+  p.setAttribute("id", "result");
   p.textContent = "Receta creada correctamente";
   container.appendChild(p);
 }
@@ -186,8 +187,11 @@ async function editRecipe(id) {
 
   resetBody();
   const p = document.createElement("p");
+  p.setAttribute("id", "result");
   p.textContent = "Receta modificada correctamente";
   container.appendChild(p);
+  console.log(container.innerHTML);
+
 }
 
 
@@ -270,7 +274,7 @@ async function printInfo(id) {
 function printCard(recipe) {
   const card = document.createElement("div");
   card.classList.add("card");
-  card.innerHTML = `
+  cardContent = `
     <h2>${recipe.name}</h2>
     <img src="${recipe.image}" alt="${recipe.name}">
     <p><strong>Origen:</strong> ${recipe.origin}</p>
@@ -279,9 +283,9 @@ function printCard(recipe) {
     `
   recipe.ingredients.forEach((ingredient) => {
     ingredient = ingredient.charAt(0).toUpperCase() + ingredient.slice(1);
-    card.innerHTML += `<li>${ingredient}</li>`;
+    cardContent += `<li>${ingredient}</li>`;
   });
-  card.innerHTML += `
+  cardContent += `
     </ul>
     <h4>Procedimiento:</h4>
     <p>${recipe.procedure}</p>
@@ -290,6 +294,7 @@ function printCard(recipe) {
     <button class="button" onclick="deleteRecipe('${recipe.id}')">Eliminar</button></div>
     
   `;
+  card.innerHTML = cardContent;
   container.appendChild(card);
 }
 
